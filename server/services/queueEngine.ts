@@ -1,5 +1,5 @@
 import crypto from 'node:crypto';
-import { dbStore } from '../db/store';
+import { dbStore } from '../db/store.ts';
 import type {
   AuditLogRecord,
   CounterRecord,
@@ -11,8 +11,8 @@ import type {
   SwapRequestRecord,
   TokenRecord,
   UserRole,
-} from '../models/types';
-import { wsHub } from '../socket/wsHub';
+} from '../models/types.ts';
+import { wsHub } from '../socket/wsHub.ts';
 
 export interface ActorInfo {
   id: string;

@@ -1,15 +1,15 @@
 import { Router } from 'express';
-import { dbStore } from '../db/store';
-import { requireAuth, requireRole } from '../middleware/authMiddleware';
-import type { CounterStatus } from '../models/types';
+import { dbStore } from '../db/store.ts';
+import { requireAuth, requireRole } from '../middleware/authMiddleware.ts';
+import type { CounterStatus } from '../models/types.ts';
 import {
   broadcastFacilitySnapshot,
   callNextAtCounter,
   getFacilitySnapshot,
   recordAuditLog,
   transitionTokenAtCounter,
-} from '../services/queueEngine';
-import { wsHub } from '../socket/wsHub';
+} from '../services/queueEngine.ts';
+import { wsHub } from '../socket/wsHub.ts';
 
 export const operatorRoutes = Router();
 

@@ -2,16 +2,16 @@ import 'dotenv/config';
 import http from 'node:http';
 import path from 'node:path';
 import express from 'express';
-import { ENV } from './server/config/env';
-import { authRoutes } from './server/routes/authRoutes';
-import { orgStructureRoutes } from './server/routes/orgStructureRoutes';
-import { queueRoutes } from './server/routes/queueRoutes';
-import { analyticsRoutes } from './server/routes/analyticsRoutes';
-import { notificationRoutes } from './server/routes/notificationRoutes';
-import { citizenRoutes } from './server/routes/citizenRoutes';
-import { operatorRoutes } from './server/routes/operatorRoutes';
-import { adminRoutes } from './server/routes/adminRoutes';
-import { wsHub } from './server/socket/wsHub';
+import { ENV } from './server/config/env.ts';
+import { authRoutes } from './server/routes/authRoutes.ts';
+import { orgStructureRoutes } from './server/routes/orgStructureRoutes.ts';
+import { queueRoutes } from './server/routes/queueRoutes.ts';
+import { analyticsRoutes } from './server/routes/analyticsRoutes.ts';
+import { notificationRoutes } from './server/routes/notificationRoutes.ts';
+import { citizenRoutes } from './server/routes/citizenRoutes.ts';
+import { operatorRoutes } from './server/routes/operatorRoutes.ts';
+import { adminRoutes } from './server/routes/adminRoutes.ts';
+import { wsHub } from './server/socket/wsHub.ts';
 
 export async function createAppServer() {
   const app = express();

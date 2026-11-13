@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import crypto from 'node:crypto';
-import { dbStore } from '../db/store';
+import { dbStore } from '../db/store.ts';
 import {
   hashPassword,
   normalizeRole,
@@ -11,8 +11,8 @@ import {
   toPublicUser,
   verifyPassword,
   verifyRefreshToken,
-} from '../middleware/authMiddleware';
-import type { UserRecord } from '../models/types';
+} from '../middleware/authMiddleware.ts';
+import type { UserRecord } from '../models/types.ts';
 
 export const authRoutes = Router();
 

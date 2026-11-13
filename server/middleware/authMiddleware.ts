@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
 import type { NextFunction, Request, Response } from 'express';
-import { ENV } from '../config/env';
-import type { LegacyOrInputRole, PublicUser, UserRecord, UserRole } from '../models/types';
+import { ENV } from '../config/env.ts';
+import type { LegacyOrInputRole, PublicUser, UserRecord, UserRole } from '../models/types.ts';
 
 export interface AuthTokenPayload {
   sub: string;

@@ -1,16 +1,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { ENV } from '../config/env';
+import { ENV } from '../config/env.ts';
 import {
   hashPassword,
   normalizeRole,
   registerUserActiveChecker,
-} from '../middleware/authMiddleware';
+} from '../middleware/authMiddleware.ts';
 import type {
   HourlyTrafficRecord,
   SmartQueueDatabase,
   SystemSettingsRecord,
-} from '../models/types';
+} from '../models/types.ts';
 
 const DEFAULT_HOURLY_TRAFFIC: HourlyTrafficRecord[] = [
   { hour: '8 AM', footfall: 28, avgWaitMins: 8 },

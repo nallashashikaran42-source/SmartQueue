@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import crypto from 'node:crypto';
-import { dbStore } from '../db/store';
-import { requireAuth } from '../middleware/authMiddleware';
+import { dbStore } from '../db/store.ts';
+import { requireAuth } from '../middleware/authMiddleware.ts';
 
 export const notificationRoutes = Router();
 

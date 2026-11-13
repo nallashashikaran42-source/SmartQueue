@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import crypto from 'node:crypto';
-import { dbStore } from '../db/store';
-import { optionalAuth, requireAuth, requireRole } from '../middleware/authMiddleware';
+import { dbStore } from '../db/store.ts';
+import { optionalAuth, requireAuth, requireRole } from '../middleware/authMiddleware.ts';
 import type {
   CounterRecord,
   CounterStatus,
@@ -9,8 +9,8 @@ import type {
   OrganisationRecord,
   QueuePriority,
   ServiceQueueRecord,
-} from '../models/types';
-import { broadcastFacilitySnapshot } from '../services/queueEngine';
+} from '../models/types.ts';
+import { broadcastFacilitySnapshot } from '../services/queueEngine.ts';
 
 export const orgStructureRoutes = Router();
 

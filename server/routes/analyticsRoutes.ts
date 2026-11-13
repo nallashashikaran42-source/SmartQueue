@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAnalyticsSummary } from '../services/queueEngine';
+import { getAnalyticsSummary } from '../services/queueEngine.ts';
 
 export const analyticsRoutes = Router();
 

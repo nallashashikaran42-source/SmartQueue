@@ -1,13 +1,13 @@
 import { Router } from 'express';
 import crypto from 'node:crypto';
-import { dbStore } from '../db/store';
+import { dbStore } from '../db/store.ts';
 import {
   hashPassword,
   normalizeRole,
   requireAuth,
   requireRole,
   toPublicUser,
-} from '../middleware/authMiddleware';
+} from '../middleware/authMiddleware.ts';
 import type {
   AccountStatus,
   CounterStatus,
@@ -17,12 +17,12 @@ import type {
   ServiceQueueRecord,
   UserRecord,
   UserRole,
-} from '../models/types';
+} from '../models/types.ts';
 import {
   broadcastFacilitySnapshot,
   getFacilitySnapshot,
   recordAuditLog,
-} from '../services/queueEngine';
+} from '../services/queueEngine.ts';
 
 export const adminRoutes = Router();
 

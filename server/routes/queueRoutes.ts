@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { dbStore } from '../db/store';
-import { requireAuth, requireRole } from '../middleware/authMiddleware';
-import type { EntryChannel } from '../models/types';
+import { dbStore } from '../db/store.ts';
+import { requireAuth, requireRole } from '../middleware/authMiddleware.ts';
+import type { EntryChannel } from '../models/types.ts';
 import {
   acceptSwapRequest,
   activateGraceSlot,
@@ -12,7 +12,7 @@ import {
   createSwapRequest,
   getFacilitySnapshot,
   issueToken,
-} from '../services/queueEngine';
+} from '../services/queueEngine.ts';
 
 export const queueRoutes = Router();
 

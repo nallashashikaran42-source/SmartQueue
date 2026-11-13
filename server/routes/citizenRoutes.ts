@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { dbStore } from '../db/store';
-import { requireAuth } from '../middleware/authMiddleware';
-import { getFacilitySnapshot } from '../services/queueEngine';
+import { dbStore } from '../db/store.ts';
+import { requireAuth } from '../middleware/authMiddleware.ts';
+import { getFacilitySnapshot } from '../services/queueEngine.ts';
 
 export const citizenRoutes = Router();
 
